@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="button">#f4f4f4</color>
+    <color name="disable">#848484</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#32CD32</color>
+    <color name="yellow">#ff8c00</color>
+    <color name="colorActionButton">#ffffff</color>
+
+    <color name="colorPutih">#ffffff</color>
+    <color name="colorBackgroundPrimary">#ededed</color>
+    <color name="textColorPrimary">#004D40</color>
+    <color name="navigationBarColor">#1c3b4d</color>
+    <color name="windowBackground">#E0F2F1</color>
+    <color name="textColorSecondary">#E0F2F1</color>
+
+    <!--new declaration of color-->
+    <color name="colorPrimary">#00796a</color>
+    <color name="colorAccent">#1c3b4d</color>
+    <!--<color name="colorAccent">#1c3b4d</color>-->
+    <color name="colorPrimaryDark">#1c3b4d</color>
+
+    <!--<color name="colorPrimaryDark">#1c3b4d</color>-->
+
+    <color name="colorPrimaryLight">#009788</color>
+    <color name="header">#80CBC4</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorLightBlue">#49a4d0</color>
+    <color name="colorLightPink">#ff0066</color>
+    <color name="colorLightGrey">#d5d5d5</color>
+    <color name="colorLightGreen">#E0F2F1</color>
+    <color name="colorDarkOrange">#fd9f01</color>
+    <color name="colorDarkGrey">#757575</color>
+
+    <color name="button_2">#00796B</color>
+    <color name="button_1">#B2DFDB</color>
+    <color name="TXTbutton_2">#FFFFFF</color>
+    <color name="TXTbutton_1">#FFFFFF</color>
+    <color name="TXTbuttonPositive">#FFFFFF</color>
+    <color name="lineview">#00796B</color>
+
+
+
+</resources>
+

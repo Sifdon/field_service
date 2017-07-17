@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/style_tasklist_adapter">
+
+        <LinearLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginRight="2dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_tasklistid"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_weight="0.9"
+                android:paddingTop="5dp"
+                android:text="Tasklist"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:textSize="12dp"
+                    android:textColor="@color/colorDarkGrey"/>
+
+                <TextView
+                    android:id="@+id/tv_statuscomplete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Yet Completed"
+                    android:textSize="12dp"
+                    android:textColor="@color/colorDarkGrey"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:text="Completed at"
+                    android:textSize="12dp"
+                    android:textColor="@color/colorDarkGrey"/>
+
+                <TextView
+                    android:id="@+id/tv_completeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="12dp"
+                    android:textColor="@color/colorDarkGrey"/>
+            </LinearLayout>
+            <!--</RelativeLayout>-->
+        </LinearLayout>
+
+        <!--button here-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp">
+            <Button
+                android:id="@+id/btn_completetasklist"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Finish"
+                android:textColor="@color/colorActionButton"
+                android:background="@color/colorLightGrey"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Working Hours :"-->
+    <!--android:textSize="12dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_workinghours"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="-"-->
+    <!--android:textSize="12dp" />-->
+    <!--</LinearLayout>-->

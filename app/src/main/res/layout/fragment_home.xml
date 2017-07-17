@@ -1,0 +1,266 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/order_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="?attr/actionBarSize"
+    tools:context=".fragments.OrderFragment"
+    android:background="@color/colorWhite">
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+    <!--android:id="@+id/swipe_refresh_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@+id/headerView"-->
+    <!--android:visibility="visible"-->
+    <!--android:layout_marginBottom="?attr/actionBarSize">-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--di sini kasih judul misalnya New WOrk Order-->
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:layout_marginBottom="?attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/relative1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--<android.support.v4.view.ViewPager-->
+                        <!--android:id="@+id/pager"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="315dp"-->
+                        <!--android:layout_alignParentStart="true"-->
+                        <!--android:layout_below="@+id/appbar"/>-->
+
+                    <com.agit.bp.mechanicbp.drawable.ViewpagerGallery
+                        android:id="@+id/pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/appbar"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative1"
+                    >
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        app:ci_drawable="@color/colorLightBlue"
+                        app:ci_drawable_unselected="@color/colorWhite"
+                        android:background="@color/colorPrimaryDark"/>
+                </RelativeLayout>
+                <!--android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"-->
+
+                <android.support.v7.widget.CardView
+                    android:layout_below="@+id/pager"
+                    android:id="@+id/list_order_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorWhite"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/mechanic_name"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hi, Niyati"
+                            android:gravity="center"
+                            android:textSize="30dp"
+                            android:textColor="@color/colorPrimary"
+                            android:visibility="visible"
+                            />
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome to Mechanic BP apps"
+                            android:gravity="center"
+                            android:textSize="20dp"
+                            android:visibility="visible"
+                            android:textColor="@color/colorDarkGrey"
+                            />
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Do your best work!"
+                            android:gravity="center"
+                            android:textSize="18dp"
+                            android:textColor="@color/colorDarkGrey"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            android:layout_marginBottom="10dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/colorLightGrey">
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Your recent total number of work order activity :"
+                            android:gravity="center"
+                            android:textSize="14dp"
+                            android:textColor="@color/colorDarkGrey"
+                            android:visibility="visible"
+                            android:layout_marginBottom="10dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_note_add_black_24dp" />
+
+                                <TextView
+                                    android:id="@+id/count_new"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="10"
+                                    android:textSize="30dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/colorDarkGrey" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="New Work Order"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_format_paint_black_24dp" />
+
+                                <TextView
+                                    android:id="@+id/count_onprocess"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="7"
+                                    android:textSize="30dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/colorDarkGrey" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="On Process Work Order"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_sync_black_24dp" />
+
+                                <TextView
+                                    android:id="@+id/count_syncoffline"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="3"
+                                    android:textSize="30dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/colorDarkGrey" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sync Offline"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold"
+                                    android:gravity="center"
+                                    android:textColor="@color/colorPrimary" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+    <!-- icon -->
+
+</android.support.design.widget.CoordinatorLayout>

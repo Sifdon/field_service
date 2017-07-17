@@ -1,0 +1,176 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_layout"
+        android:paddingRight="@dimen/padding_layout">
+
+
+        <ImageView
+            android:id="@+id/logo1"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:src="@drawable/logo_bp1" />
+
+        <ImageView
+            android:id="@+id/logo2"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:src="@drawable/logotextbpwhite" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/ic_people_black_24dp"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/prompt_email"
+                        android:imeActionId="@+id/login"
+                        android:imeActionLabel="@string/action_sign_in_short"
+                        android:imeOptions="actionUnspecified"
+                        android:inputType="textNoSuggestions"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lineseparator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorLightGrey" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/prompt_password"
+                        android:imeActionId="@+id/login"
+                        android:imeActionLabel="@string/action_sign_in_short"
+                        android:imeOptions="actionUnspecified"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/textColorPrimary" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/showpassword"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:buttonTint="@color/colorWhite"
+                android:text="Show password"
+                android:textColor="@color/colorWhite"
+                />
+
+        </LinearLayout>
+
+        <!--com.agit.bp.mechanicbp.drawable.UnderlineTextView-->
+
+        <Button
+            android:id="@+id/email_sign_in_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/style_button_primary"
+            android:gravity="center"
+            android:text="@string/action_sign_in"
+            android:textColor="@color/TXTbutton_2"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Powered By : Digi Field Service"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <!--<RelativeLayout--><!--android:id="@+id/badge_layout1"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content">-->
+
+    <!--<RelativeLayout--><!--android:id="@+id/relative_layout"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content">-->
+
+    <!--<Button--><!--android:id="@+id/email_sign_in_button"--><!--style="?android:textAppearanceSmall"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_gravity="center_horizontal"--><!--android:layout_marginTop="16dp"--><!--android:background="@drawable/style_button_primary"--><!--android:gravity="center"--><!--android:text="@string/action_sign_in"--><!--android:textColor="@color/textColorSecondary"--><!--android:textStyle="bold" />--><!--</RelativeLayout>-->
+
+    <!--<TextView--><!--android:id="@+id/badge_notification_1"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignRight="@id/relative_layout"--><!--android:background="@drawable/badge_item_count"--><!--android:text="27"--><!--android:textColor="#FFF"--><!--android:textSize="16sp"--><!--android:textStyle="bold" />--><!--</RelativeLayout>-->

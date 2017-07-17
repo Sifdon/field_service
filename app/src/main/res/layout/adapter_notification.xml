@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <!--app:cardCornerRadius="2dp"-->
+    <LinearLayout
+        android:id="@+id/list_order_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:src="@drawable/ic_mail_primary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_titleNotif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="New Work Order Assignment"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="WO Number"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_WONumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WONUMBER123"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Name"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_CustomerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PT. Bina Pertiwi"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textSize="12dp" />
+                </LinearLayout>
+                <!--</RelativeLayout>-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="80dp"
+            android:background="@color/colorLightGrey"></LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

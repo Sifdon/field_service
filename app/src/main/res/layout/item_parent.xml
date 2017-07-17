@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:background="@color/lineview">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/linearLayout"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewParent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:text="DS Number"
+                        android:textColor="@color/TXTbuttonPositive"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/ic_play_arrow_white_24dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--</RelativeLayout>-->
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/appbar_padding_top"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:longClickable="false"
+                android:minWidth="@android:dimen/app_icon_size"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title=" ">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:text="Change Profile"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/titleProfile"
+            android:layout_below="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBlue"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/iconprofile" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="Niyati Rizkia"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/titleProfile"
+            android:layout_above="@+id/bottomContainerTwoButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_bottom"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/icon_plant"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_people_black_24dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center_vertical"
+                            android:text="NRP"
+                            android:textColor="@color/disable"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_nrp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:editable="false"
+                            android:padding="5dp"
+                            android:text="STF0011" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="57dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_create_black_24dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_bottom"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_contact_phone_black_24dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center_vertical"
+                            android:text="Contact Number"
+                            android:textColor="@color/disable"
+                            android:textSize="12sp"
+                            android:textStyle="bold"></TextView>
+
+                        <EditText
+                            android:id="@+id/et_contact_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:editable="false"
+                            android:padding="5dp"
+                            android:text="08993971859" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/change_contact_number"
+                        android:layout_width="57dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:background="@drawable/style_button_change_profile">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_create_black_24dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_bottom"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_vpn_key_black_24dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center_vertical"
+                            android:text="Password"
+                            android:textColor="@color/disable"
+                            android:textSize="12sp"
+                            android:textStyle="bold"></TextView>
+
+                        <EditText
+                            android:id="@+id/et_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:editable="false"
+                            android:inputType="textPassword"
+                            android:padding="5dp"
+                            android:text="STF0011" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:id="@+id/change_password"
+                        android:layout_width="57dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/style_button_change_profile">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/ic_create_black_24dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+        <!--<LinearLayout-->
+            <!--android:id="@+id/bottomContainerTwoButtons"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_gravity="center|bottom"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/style_button_2"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Accept"-->
+                <!--android:textColor="@color/TXTbutton_2" />-->
+            <!--&lt;!&ndash;00796B&ndash;&gt;-->
+        <!--</LinearLayout>-->
+
+    </RelativeLayout>
+
+</LinearLayout>

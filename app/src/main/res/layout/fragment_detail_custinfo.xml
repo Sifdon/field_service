@@ -1,0 +1,309 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DetailCustInfoFragment"
+    android:id="@+id/order_card">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/swipe_refresh_layout">
+
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="@color/colorBackgroundPrimary">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/root_relative_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context=".activity.WorkOrderDetail">
+
+                <!--Card Header-->
+                <android.support.v7.widget.CardView
+                    android:elevation="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/card_header1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!--Plant-->
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/icon_id"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="14dp"
+                                android:layout_marginBottom="8dp"
+                                android:src="@drawable/ic_work_black_24dp" >
+                            </ImageView>
+
+                            <TextView
+                                android:id="@+id/tv_WOid"
+                                android:text="5000007000001"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:textSize="20sp"
+                                android:textColor="@color/disable"
+                                android:textStyle="bold"
+                                android:gravity="center_vertical">
+                            </TextView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--Card Header-->
+                <android.support.v7.widget.CardView
+                    android:elevation="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="70dp"
+                    android:id="@+id/card_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <!--Plant-->
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/icon_plant"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="14dp"
+                                android:layout_marginBottom="8dp"
+                                android:src="@drawable/ic_work_black_24dp" >
+                            </ImageView>
+
+                            <LinearLayout
+                                android:background="@drawable/border_bottom"
+                                android:orientation="vertical"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:text="Cust. Name"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/disable"
+                                    android:textStyle="bold"
+                                    android:gravity="center_vertical">
+                                </TextView>
+
+                                <TextView
+                                    android:text="Value"
+                                    android:id="@+id/tv_custname"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="center_vertical" android:minHeight="23dp">
+                                </TextView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--SO Number-->
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:src="@drawable/ic_description_black_24dp" >
+                            </ImageView>
+
+                            <LinearLayout
+                                android:background="@drawable/border_bottom"
+                                android:orientation="vertical"
+                                android:padding="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:text="Address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/disable"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center_vertical">
+                                </TextView>
+
+                                <TextView
+                                    android:text="Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="center_vertical"
+                                    android:id="@+id/tv_address"
+                                    android:minHeight="23dp">
+                                </TextView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--Address-->
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:src="@drawable/ic_map_black_24dp" >
+                            </ImageView>
+
+                            <LinearLayout
+                                android:background="@drawable/border_bottom"
+                                android:orientation="vertical"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:text="Contact Person"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/disable"
+                                    android:textStyle="bold"
+                                    android:gravity="center_vertical">
+                                </TextView>
+
+                                <TextView
+                                    android:text="Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="center_vertical"
+                                    android:id="@+id/tv_contactperson"
+                                    android:minHeight="23dp">
+                                </TextView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--Status-->
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:src="@drawable/ic_build_black_24dp" >
+                            </ImageView>
+
+                            <LinearLayout
+                                android:background="@drawable/border_bottom"
+                                android:orientation="vertical"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:text="Phone"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/disable"
+                                    android:textStyle="bold"
+                                    android:gravity="center_vertical">
+                                </TextView>
+
+                                <TextView
+                                    android:text="Value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="center_vertical"
+                                    android:id="@+id/tv_phone"
+                                    android:minHeight="23dp">
+                                </TextView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <!-- icon -->
+
+</android.support.design.widget.CoordinatorLayout>

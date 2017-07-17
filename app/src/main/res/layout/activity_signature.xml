@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundPrimary"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.WriteSignature">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/nav_drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/appbar_padding_top"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    android:longClickable="false"
+                    android:minWidth="@android:dimen/app_icon_size"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"
+                    app:title=" ">
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.AppBarLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottomContainerTwoButtons"
+                android:layout_below="@+id/appbar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorWhite"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:layout_width="35dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.3"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center_vertical|center_horizontal"
+                                        android:src="@drawable/ic_flag_notification" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.7"
+                                    android:gravity="left"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text="Recent Status"
+                                        android:textColor="@color/colorDarkGrey"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_WOSTATUS"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text="Assigned New Order"
+                                        android:textColor="@color/colorPrimaryLight"
+                                        android:textSize="25dp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lineseparator"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="10dp"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/colorLightGrey" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_weight="0.3"
+                                        android:src="@drawable/ic_assignment_black_24dp" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.7"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:text="WO Number"
+                                            android:textColor="@color/colorDarkGrey"
+                                            android:textSize="15dp"
+                                            android:textStyle="bold"></TextView>
+
+                                        <TextView
+                                            android:id="@+id/tv_WOID"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="5dp"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="23dp"
+                                            android:text="Value"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textSize="14dp" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <ImageView
+                                        android:layout_width="35dp"
+                                        android:layout_height="35dp"
+                                        android:layout_weight="0.3"
+                                        android:src="@drawable/ic_date_range_black_24dp" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.7"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center_vertical"
+                                            android:text="WO Date"
+                                            android:textColor="@color/colorDarkGrey"
+                                            android:textSize="15dp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/tv_WODate"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="5dp"
+                                            android:gravity="center_vertical"
+                                            android:minHeight="23dp"
+                                            android:text="25/08/2016 18:33:32"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textSize="14dp" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Form Voice of Customer"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/list_order_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="2dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_voc" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Technician Work Satisfaction"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textSize="15dp"
+                                            android:textStyle="bold" />
+
+                                        <RadioGroup
+                                            android:id="@+id/radioWOResultIsSatisfy"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:paddingTop="10dp"
+                                            android:paddingBottom="10dp">
+
+                                            <RadioButton
+                                                android:id="@+id/rb_satisfy"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="0.5"
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:checked="true"
+                                                android:text="Satisfy"
+                                                android:textSize="14dp" />
+
+                                            <RadioButton
+                                                android:id="@+id/rb_notsatisfy"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="0.5"
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:text="Not Satisfy"
+                                                android:textSize="14dp" />
+
+                                        </RadioGroup>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:layout_marginTop="5dp"
+                                            android:orientation="horizontal">
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@color/colorLightGrey" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_voc" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Technician Work Result"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textSize="15dp"
+                                            android:textStyle="bold" />
+
+                                        <RadioGroup
+                                            android:id="@+id/radioWOResultIsDone"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:paddingTop="10dp"
+                                            android:paddingBottom="10dp">
+
+                                            <RadioButton
+                                                android:id="@+id/rb_done"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="0.5"
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:checked="true"
+                                                android:text="Done"
+                                                android:textSize="14dp" />
+
+                                            <RadioButton
+                                                android:id="@+id/rb_notyet"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="0.5"
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:text="Not Yet Done"
+                                                android:textSize="14dp" />
+
+                                        </RadioGroup>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:layout_marginTop="5dp"
+                                            android:orientation="horizontal">
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@color/colorLightGrey" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_voc" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:padding="5dp">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Technician Score"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textSize="15dp"
+                                            android:textStyle="bold" />
+
+                                        <RadioGroup
+                                            android:id="@+id/radioWOScore"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal"
+                                            android:paddingTop="10dp"
+                                            android:paddingBottom="10dp">
+
+                                            <RadioButton
+                                                android:id="@+id/rb_good"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:checked="true"
+                                                android:text="Good"
+                                                android:textSize="14dp" />
+
+                                            <RadioButton
+                                                android:id="@+id/rb_fair"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:text="Fair"
+                                                android:textSize="14dp" />
+
+                                            <RadioButton
+                                                android:id="@+id/rb_notgood"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:buttonTint="@color/colorPrimaryDark"
+                                                android:text="Not Good"
+                                                android:textSize="14dp" />
+                                        </RadioGroup>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:layout_marginTop="5dp"
+                                            android:orientation="horizontal">
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@color/colorLightGrey" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <!--start Recipient Comment-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_voc" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:padding="5dp"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Recipient Comment"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textSize="15dp"
+                                            android:textStyle="bold" />
+
+                                        <EditText
+                                            android:id="@+id/et_comments"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_weight="0.40"
+                                            android:background="@android:color/transparent"
+                                            android:hint="write comments here..."
+                                            android:inputType="textMultiLine"
+                                            android:padding="5dp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:orientation="horizontal">
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@color/colorLightGrey" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <!--finish-->
+
+                                <!--start Recipient Name-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/ic_voc" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:padding="5dp"
+                                        android:weightSum="1">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Recipient Name"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textSize="15dp"
+                                            android:textStyle="bold" />
+
+                                        <EditText
+                                            android:id="@+id/et_custname"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_weight="0.40"
+                                            android:background="@android:color/transparent"
+                                            android:hint="write name here..."
+                                            android:inputType="textMultiLine"
+                                            android:padding="5dp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:orientation="horizontal">
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@color/colorLightGrey" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <!--finish-->
+
+                                <!--start TTD-->
+                                <!--<LinearLayout-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="match_parent"-->
+                                    <!--android:layout_marginTop="5dp"-->
+                                    <!--android:orientation="horizontal">-->
+
+                                    <!--<ImageView-->
+                                        <!--android:layout_width="60dp"-->
+                                        <!--android:layout_height="60dp"-->
+                                        <!--android:layout_gravity="center"-->
+                                        <!--android:layout_margin="5dp"-->
+                                        <!--android:src="@drawable/ic_voc" />-->
+
+                                    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:padding="5dp"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;android:weightSum="1">&ndash;&gt;-->
+
+                                        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                                            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                                            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                                            <!--&lt;!&ndash;android:text="Recipient Signature"&ndash;&gt;-->
+                                            <!--&lt;!&ndash;android:textColor="@color/colorPrimaryDark"&ndash;&gt;-->
+                                            <!--&lt;!&ndash;android:textSize="15dp"&ndash;&gt;-->
+                                            <!--&lt;!&ndash;android:textStyle="bold" />&ndash;&gt;-->
+
+                                    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+                                <!--</LinearLayout>-->
+                                <!--finish-->
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Recipient Signature"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn_writesignature"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/style_button_primary"
+                            android:gravity="center"
+                            android:text="Write Signature"
+                            android:elevation="2dp"
+                            android:textColor="@color/TXTbutton_2" />
+
+                        <!--<android.support.v7.widget.CardView-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--app:cardElevation="0dp"-->
+                            <!--app:cardCornerRadius="2dp">-->
+
+                                <!--<LinearLayout-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:orientation="vertical"-->
+                                    <!--android:padding="5dp"-->
+                                    <!--android:weightSum="1">-->
+
+                                    <!--<ImageView-->
+                                        <!--android:id="@+id/img_signature"-->
+                                        <!--android:layout_width="200dp"-->
+                                        <!--android:layout_height="200dp"-->
+                                        <!--android:layout_gravity="center"-->
+                                        <!--android:maxWidth="300dp"-->
+                                        <!--android:visibility="invisible" />-->
+
+                                    <ImageView
+                                        android:id="@+id/img_signature"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/no_signature_yet" />
+
+                                <!--</LinearLayout>-->
+                            <!--&lt;!&ndash;finish&ndash;&gt;-->
+
+                        <!--</android.support.v7.widget.CardView>-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/bottomContainerTwoButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_horizontal|bottom"
+                android:orientation="horizontal">
+
+                <!--<Button-->
+                <!--android:id="@+id/btn_back"-->
+                <!--style="?android:attr/borderlessButtonStyle"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@color/buttonNegative"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Back" />-->
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/style_button_2"
+                    android:gravity="center"
+                    android:text="Submit"
+                    android:textColor="@color/TXTbutton_2" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.appeaser.sublimenavigationviewlibrary.SublimeNavigationView
+            android:id="@+id/navigation_view"
+            style="@style/NavigationViewStyle"
+            android:layout_width="304dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:snvHeaderLayout="@layout/navigation_bar"
+            app:snvMenu="@menu/menu_navbar" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

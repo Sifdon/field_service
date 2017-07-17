@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/list_order_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/lineview" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="25dp"
+                android:paddingTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_WOId"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="0.9"
+                        android:paddingTop="10dp"
+                        android:text="DS Number"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/ic_thumb_up_black_24dp"></ImageView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Order Type :"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_ordertype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plant Value"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Name :"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_custname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SO No Value"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Address :"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Value"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Status :"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tv_wostatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Value"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

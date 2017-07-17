@@ -1,0 +1,50 @@
+{
+  "project_info": {
+    "project_number": "688940076774",
+    "firebase_url": "https://mechanicbp-55b81.firebaseio.com",
+    "project_id": "mechanicbp-55b81",
+    "storage_bucket": "mechanicbp-55b81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688940076774:android:d947758b45477621",
+        "android_client_info": {
+          "package_name": "com.agit.bp.mechanicbp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688940076774-0mhsuhj77nrqp5go6u6t35trns6k8hgr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.agit.bp.mechanicbp",
+            "certificate_hash": "66F206F8779E2DC7F036357823DAC5E638501F38"
+          }
+        },
+        {
+          "client_id": "688940076774-3qncsf0dp74il8ru9eo641r48svdu01g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0C19pDKtGHqq2O_3iEt3aMr3hIWsxtQw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

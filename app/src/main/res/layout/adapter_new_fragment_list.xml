@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/list_order_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:layout_marginBottom="5dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="10dp"
+                android:layout_height="match_parent">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/lineview"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:paddingLeft="25dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.9"
+                        android:layout_height="36dp"
+                        android:id="@+id/tv_WOId"
+                        android:text="DS Number"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:paddingTop="10dp"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_build_black_24dp"
+                        android:layout_weight="0.1"
+                        >
+                    </ImageView>
+
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Order Type"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"/>
+                    <TextView
+                        android:text="Value"
+                        android:id="@+id/tv_ordertype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Material"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"/>
+                    <TextView
+                        android:text="Value"
+                        android:id="@+id/tv_materialSN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Customer Name"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"/>
+                    <TextView
+                        android:text="Value"
+                        android:id="@+id/tv_custname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Address"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"/>
+                    <TextView
+                        android:text="Value"
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Assigned Date"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"/>
+                    <TextView
+                        android:text="Value"
+                        android:id="@+id/tv_assigneddate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Scheduled Date"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"/>
+                    <TextView
+                        android:text="Value"
+                        android:id="@+id/tv_scheduleddate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Status"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"/>
+                    <TextView
+                        android:text="Value"
+                        android:id="@+id/tv_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--</RelativeLayout>-->
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
